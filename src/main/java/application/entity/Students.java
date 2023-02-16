@@ -3,8 +3,6 @@ package application.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
 import javax.persistence.*;
 
 
@@ -13,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name="studentdata" , schema = "hbmappings")
-public class students {
+public class Students {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -29,5 +27,5 @@ public class students {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "LIBRARY_ID")
-    private library lib;
+    private Library lib;
 }

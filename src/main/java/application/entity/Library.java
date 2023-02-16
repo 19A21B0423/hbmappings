@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name="librarydata" , schema = "hbmappings")
-public class library {
+public class Library {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "LIBRARY_ID")

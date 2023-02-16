@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/employe")
-public class oneToManyController {
+public class OneToManyController {
 
     @Autowired
     private EmployeeRepo emprepo;

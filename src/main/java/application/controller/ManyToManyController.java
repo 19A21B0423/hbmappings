@@ -1,7 +1,7 @@
 package application.controller;
 
-import application.entity.TeamMembers;
-import application.repo.MembersRepo;
+import application.entity.Doctors;
+import application.repo.DoctorRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,15 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/TeamMembers")
-public class ManyToOneController {
-
+@RequestMapping("/Doctors")
+public class ManyToManyController {
     @Autowired
-    private MembersRepo memrepo;
+    private DoctorRepo docrepo;
 
-    @PostMapping("/create/manyToOne")
-    public TeamMembers save(@RequestBody TeamMembers Team_mem)
+    @PostMapping("/create/manyToMany")
+    public Doctors save(@RequestBody Doctors doc)
     {
-        return memrepo.save(Team_mem);
+        return docrepo.save(doc);
     }
 }
